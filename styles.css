@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Banner Image */
+.banner {
+    text-align: center;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1em;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.testimonial-item {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.testimonial-item blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0;
+}
+
+.testimonial-item p {
+    font-size: 1em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Rooms.html animations */
+
+.room-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #fff;
+    animation: fadeIn 1s ease;
+}
+
+.room {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.room img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.room img:hover {
+    transform: scale(1.05);
+}
+
+.room h2 {
+    font-size: 2em;
+    margin: 15px 0;
+}
+
+.room p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.room button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.room button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.room:hover {
+    transform: scale(1.05);
+}
+
+/* facilities.html animations */
+
+.facility-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensures two images per row */
+    gap: 80px;
+    padding: 50px;
+    background-color: #fff;
+    animation: fadeIn 1.2s ease;
+}
+
+.facility {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.facility img {
+    width: 100%;  /* Full width of the container */
+    height: auto;
+    max-height: 250px; /* Ensures the images have a good size */
+    object-fit: cover; /* Ensures images are cropped nicely */
+    border-radius: 5px;
+    margin-bottom: 15px; /* Adds space between image and description */
+}
+
+.facility:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+}
+
+
+/* about.html animations */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 2.5em;
+}
+
+section.about-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.about-text {
+    flex: 2;
+    padding-right: 30px;
+}
+
+.about-text h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* contact.html animations */
+
+.contact-form-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #fff;
+    animation: fadeIn 1.2s ease;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex: 2;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Animations for smoother interactions */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

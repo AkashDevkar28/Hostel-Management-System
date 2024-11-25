@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Rooms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="r.html">Rooms</a></li>
+                <li><a href="roomavailable.jsp">Check Room Availability</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Our Hostel Rooms</h1>
+        <p>Explore various rooms and choose the best one for you.</p>
+    </header>
+
+    <section class="room-list">
+        <div class="room">
+            <h2>Single Bed Room</h2>
+            <img src="Single_room.webp" alt="Single Room">
+            <!-- <p>Availability: <span id="single-bed-availability">5</span></p> -->
+            <p>Price for 1 Months: <span id="single-bed-price">₹5000</span></p>
+            <button class="book-btn" onclick="bookRoom('Single Bed Room', 15000)">Book Now</button>
+        </div>
+
+        <div class="room">
+            <h2>Two Sharing Room</h2>
+            <img src="Two_Share.webp" alt="Double Room">
+            <!-- <p>Availability: <span id="two-sharing-availability">3</span></p> -->
+            <p>Price for 1 Months: <span id="two-sharing-price">₹4000</span></p>
+            <button class="book-btn" onclick="bookRoom('Two Sharing Room', 10000)">Book Now</button>
+        </div>
+
+        <div class="room">
+            <h2>Dorm Room</h2>
+            <img src="Four_Sharing.jpeg" alt="Dorm Room">
+            <!-- <p>Availability: <span id="dorm-availability">10</span></p> -->
+            <p>Price for 1 Months: <span id="dorm-price">₹3000</span></p>
+            <button class="book-btn" onclick="bookRoom('Dorm Room', 7500)">Book Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>2024</p>
+    </footer>
+
+    <script src="roomAvailability.js"></script>
+    <script>
+        // Function to handle booking button click
+        function bookRoom(roomType, price) {
+            // Store selected room details in session storage
+            sessionStorage.setItem("selectedRoomType", roomType);
+            sessionStorage.setItem("selectedRoomPrice", price);
+    
+            // Redirect to the booking page
+            window.location.href = "booking.jsp";
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: url('Hostel.jpg') no-repeat center center/cover; /* Add hostel background image */
+    position: relative;
+}
+
+/* Blurred Overlay */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance contrast */
+    backdrop-filter: blur(5px); /* Adds blur effect to the background image */
+    z-index: 1;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2; /* Keeps it above the blurred overlay */
+}
+
+/* Login Box */
+.login-box {
+    background: #fff; /* White background for the login form */
+    padding: 2rem;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform: scale(0.9);
+    animation: fadeInScale 1.2s ease-out forwards;
+}
+
+/* Logo */
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInLogo 1.5s ease forwards 0.5s;
+}
+
+/* Heading */
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.7s;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 1rem;
+    background-color: #2b366a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #3d37b3;
+    transform: scale(1.05);
+}
+
+/* Additional Links */
+.additional-links {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.9s;
+}
+
+.additional-links a {
+    color: #2c0bea;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hostel Rooms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Our Hostel Rooms</h1>
+        <p>Explore various rooms and choose the best one for you.</p>
+    </header>
+
+    <section class="room-list">
+        <div class="room">
+            <h2>Single Bed Rooms</h2>
+            <img src="Single_room.webp" alt="Single Room">
+            <p>A private room designed for one person, offering privacy and comfort. These rooms typically feature a single bed, study desk, wardrobe, and personal storage space. Ideal for students who prefer a quiet and focused environment.</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="room">
+            <h2>Two Sharing Rooms</h2>
+            <img src="Two_Share.webp" alt="Double Room">
+            <p>A shared room for two individuals, equipped with two single beds, study desks, wardrobes, and personal storage space for each resident. These rooms are perfect for those who enjoy company and want to share living costs.</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="room">
+            <h2>Dorm Rooms</h2>
+            <img src="Four_Sharing.jpeg" alt="Suite Room">
+            <p>A large dormitory-style room designed for Four occupants, usually equipped with bunk beds, shared storage, and common living space. These rooms are budget-friendly and perfect for students looking for a more social experience.</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>2024</p>
+    </footer>
+
+    <!-- JavaScript to handle "Book Now" button redirection -->
+    <script>
+        // Select all "Book Now" buttons
+        const bookButtons = document.querySelectorAll('.book-btn');
+        
+        // Add click event listener to each button
+        bookButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Redirect to login page
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+
+</body>
+</html>
